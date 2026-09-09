@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KaliHub - Videos de Kali Linux y Ciberseguridad</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- ANIMATED DRAGON BACKGROUND -->
+    <div class="dragon-bg" aria-hidden="true">
+        <div class="dragon-core">
+            <div class="dragon-flame"></div>
+            <img src="images/kali-dragon.png" alt="" class="dragon-img">
+        </div>
+        <img src="images/kali-dragon.png" alt="" class="dragon-ghost dragon-ghost-1">
+        <img src="images/kali-dragon.png" alt="" class="dragon-ghost dragon-ghost-2">
+    </div>
+
+    <!-- WELCOME SCREEN -->
+    <div class="welcome-overlay" id="welcomeOverlay">
+        <div class="welcome-box">
+            <div class="welcome-text" id="welcomeText">
+                <img src="images/kali-dragon.png" alt="Kali Linux" class="welcome-logo">
+                <h2>Bienvenido a <span>Kali</span>Hub</h2>
+                <p class="welcome-tagline">El portal para aprender Kali Linux y ciberseguridad</p>
+                <div class="welcome-about" id="welcomeAbout">
+                    <div class="about-block">
+                        <h3><span class="about-icon">⚙</span> ¿Cómo funciona Kali Linux?</h3>
+                        <p>Kali Linux es una distribución basada en Debian diseñada para auditorías de seguridad y pruebas de penetración. Trae <strong>más de 600 herramientas</strong> preinstaladas como Nmap (escaneo de redes), Wireshark (análisis de tráfico), John the Ripper (descifrado de contraseñas), Aircrack-ng (seguridad Wi-Fi) y Metasploit (explotación). Usa un modelo de lanzamiento continuo (<em>rolling release</em>) para tener siempre las últimas herramientas, y puede ejecutarse desde un live USB o instalarse como sistema principal.</p>
+                    </div>
+                    <div class="about-block">
+                        <h3><span class="about-icon">🕐</span> ¿Cómo empezó?</h3>
+                        <p>Kali Linux nació el <strong>13 de marzo de 2013</strong> como sucesor de BackTrack, creado por <strong>Mati Aharoni y Devon Kearns</strong> de Offensive Security. Se presentó en la conferencia Black Hat Europe en Ámsterdam y, gracias a su apuesta por Debian y su modelo de lanzamiento continuo, se convirtió en la distribución de hacking y ciberseguridad más usada del mundo, apareciendo incluso en la serie <em>Mr. Robot</em>.</p>
+                    </div>
+                </div>
+                <div class="welcome-video" id="welcomeVideo">
+                    <p class="welcome-video-hint"><span class="intro-badge">INTRO</span> Un vídeo de 3 minutos que explica y muestra Kali Linux</p>
+                </div>
+            </div>
+            <div class="welcome-footer">
+                <button class="welcome-btn" id="welcomeBtn">EMPEZAR</button>
+                <button class="welcome-skip" id="welcomeEnter">Entrar a la página →</button>
+            </div>
+        </div>
+    </div>
+
+    <header class="header">
+        <div class="logo">
+            <img src="images/kali-dragon.png" alt="Kali Linux" class="logo-icon-img">
+            <h1>Kali<span>Hub</span></h1>
+        </div>
+        <nav class="nav-tabs">
+            <button class="tab-btn active" data-tab="home">Inicio</button>
+            <button class="tab-btn" data-tab="links">Recursos</button>
+            <button class="tab-btn" data-tab="reviews">Reviews</button>
+        </nav>
+        <div class="search-bar">
+            <input type="text" placeholder="Buscar videos..." id="searchInput">
+        </div>
+    </header>
+
+    <!-- HOME TAB -->
+    <main class="tab-content active" id="tab-home">
+        <section class="hero">
+            <div class="hero-overlay"></div>
+            <div class="hero-text">
+                <h2>Kali Linux</h2>
+                <p>El portal de vídeos sobre ciberseguridad, pentesting y auditorías</p>
+            </div>
+        </section>
+
+        <section class="categories">
+            <h3>Categorías</h3>
+            <div class="category-chips">
+                <button class="chip active" data-category="all">Todos</button>
+                <button class="chip" data-category="intro">Introducción</button>
+                <button class="chip" data-category="instalacion">Instalación</button>
+                <button class="chip" data-category="herramientas">Herramientas</button>
+                <button class="chip" data-category="pentesting">Pentesting</button>
+            </div>
+        </section>
+
+        <section class="video-grid" id="videoGrid">
+            <!-- Videos inserted by JS -->
+        </section>
+    </main>
+
+    <!-- LINKS TAB -->
+    <main class="tab-content" id="tab-links">
+        <div class="resources-container">
+            <div class="resources-header">
+                <h2>Recursos sobre Kali Linux</h2>
+                <p>Enlaces, guías y páginas oficiales para profundizar en Kali Linux y ciberseguridad</p>
+            </div>
+
+            <section class="resource-group">
+                <h3>📚 Wikipedia</h3>
+                <ul class="resource-list">
+                    <li><a href="https://es.wikipedia.org/wiki/Kali_Linux" target="_blank" rel="noopener">Kali Linux (enciclopedia española)</a></li>
+                    <li><a href="https://en.wikipedia.org/wiki/Kali_Linux" target="_blank" rel="noopener">Kali Linux (English Wikipedia)</a></li>
+                    <li><a href="https://es.wikipedia.org/wiki/BackTrack" target="_blank" rel="noopener">BackTrack (predecesor de Kali)</a></li>
+                    <li><a href="https://en.wikipedia.org/wiki/Offensive_Security" target="_blank" rel="noopener">Offensive Security (empresa creadora)</a></li>
+                    <li><a href="https://es.wikipedia.org/wiki/Anexo:Distribuciones_Linux" target="_blank" rel="noopener">Lista de distribuciones Linux en Wikipedia</a></li>
+                </ul>
+            </section>
+
+            <section class="resource-group">
+                <h3>🖥 Sitio oficial</h3>
+                <ul class="resource-list">
+                    <li><a href="https://www.kali.org/" target="_blank" rel="noopener">kali.org - Página oficial</a></li>
+                    <li><a href="https://www.kali.org/blog/" target="_blank" rel="noopener">Blog oficial de Kali Linux</a></li>
+                    <li><a href="https://www.kali.org/docs/" target="_blank" rel="noopener">Documentación oficial</a></li>
+                    <li><a href="https://www.kali.org/tools/" target="_blank" rel="noopener">Lista de +600 herramientas (kali.org/tools)</a></li>
+                    <li><a href="https://www.kali.org/get-kali/" target="_blank" rel="noopener">Descargar Kali Linux (ISO / imágenes)</a></li>
+                    <li><a href="https://gitlab.com/kalilinux" target="_blank" rel="noopener">Repositorio oficial en GitLab</a></li>
+                    <li><a href="https://www.kali.org/docs/introduction/what-is-kali-linux/" target="_blank" rel="noopener">¿Qué es Kali Linux? (guía oficial)</a></li>
+                </ul>
+            </section>
+
+            <section class="resource-group">
+                <h3>📖 Guías y artículos</h3>
+                <ul class="resource-list">
+                    <li><a href="https://www.ionos.com/es-us/digitalguide/servidores/configuracion/kali-linux" target="_blank" rel="noopener">Kali Linux: guía completa de IONOS para empresas</a></li>
+                    <li><a href="https://itsfoss.com/kali-linux-review/" target="_blank" rel="noopener">Kali Linux Review - It's FOSS (no para uso diario)</a></li>
+                    <li><a href="https://www.comparitech.com/net-admin/kali-linux-review/" target="_blank" rel="noopener">Kali Linux Review - Comparitech (pros y contras)</a></li>
+                    <li><a href="https://thectoclub.com/tools/kali-linux-review/" target="_blank" rel="noopener">Kali Linux Review - The CTO Club (4.5/5)</a></li>
+                    <li><a href="https://www.dedoimedo.com/computers/kali-linux.html" target="_blank" rel="noopener">Kali Linux - Dedoimedo (experiencia práctica)</a></li>
+                    <li><a href="https://www.linuxadictos.com/kali-linux-para-que-sirve.html" target="_blank" rel="noopener">¿Para qué sirve Kali Linux? - Linux Adictos</a></li>
+                    <li><a href="https://www.arsys.es/blog/soluciones/blog/que-es-kali-linux-para-que-sirve" target="_blank" rel="noopener">Qué es Kali Linux y para qué sirve - Arsys</a></li>
+                </ul>
+            </section>
+
+            <section class="resource-group">
+                <h3>💬 Comunidad y opiniones</h3>
+                <ul class="resource-list">
+                    <li><a href="https://www.g2.com/products/kali-linux/reviews" target="_blank" rel="noopener">G2 - Opiniones reales de usuarios de Kali Linux</a></li>
+                    <li><a href="https://www.peerspot.com/products/comparisons/kali-linux_vs_ubuntu-linux" target="_blank" rel="noopener">PeerSpot - Kali Linux vs Ubuntu</a></li>
+                    <li><a href="https://www.reddit.com/r/linuxquestions/comments/zc7bbf/why_is_kali_linux_so_hated_as_a_daily_driver/" target="_blank" rel="noopener">Reddit - ¿por qué se odia Kali como daily driver?</a></li>
+                    <li><a href="https://www.linux.org/threads/whats-the-advantage-of-kali-linux.50361/" target="_blank" rel="noopener">Linux.org Forum - ventaja de Kali Linux</a></li>
+                    <li><a href="https://forums.kali.org/" target="_blank" rel="noopener">Foro oficial de Kali Linux</a></li>
+                    <li><a href="https://systemweakness.com/black-arch-vs-kali-linux-109d86aab2b7" target="_blank" rel="noopener">System Weakness - BlackArch vs Kali Linux</a></li>
+                </ul>
+            </section>
+        </div>
+    </main>
+
+    <!-- REVIEWS TAB -->
+    <main class="tab-content" id="tab-reviews">
+        <div class="reviews-container">
+            <div class="reviews-header">
+                <h2>Reviews y Opiniones sobre Kali Linux</h2>
+                <div class="rating-summary">
+                    <span class="avg-rating" id="avgRating">4.6</span>
+                    <div class="stars-display">★★★★★</div>
+                    <span class="total-reviews" id="totalReviews">128 reviews</span>
+                </div>
+            </div>
+
+            <div class="write-review">
+                <h3>Escribe tu Review</h3>
+                <form id="reviewForm">
+                    <div class="form-group">
+                        <label>Tu Calificación</label>
+                        <div class="star-rating" id="starRating">
+                            <span class="star" data-value="1">★</span>
+                            <span class="star" data-value="2">★</span>
+                            <span class="star" data-value="3">★</span>
+                            <span class="star" data-value="4">★</span>
+                            <span class="star" data-value="5">★</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="reviewerName" placeholder="Tu nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="reviewText" rows="3" placeholder="Escribe tu review..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn-review">Enviar Review</button>
+                </form>
+            </div>
+
+            <div class="reviews-list" id="reviewsList">
+                <!-- Reviews inserted by JS -->
+            </div>
+        </div>
+    </main>
+
+    <!-- VIDEO MODAL -->
+    <div class="modal hidden" id="videoModal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" id="closeModal">✕</button>
+            <div class="modal-video" id="modalVideo"></div>
+            <div class="modal-info">
+                <h3 id="modalTitle"></h3>
+                <p id="modalDescription"></p>
+                <div class="modal-meta">
+                    <span id="modalCategory"></span>
+                    <span id="modalDate"></span>
+                </div>
+                <div class="modal-rating">
+                    <span>Calificación: </span>
+                    <span id="modalRating"></span>
+                </div>
+                <div class="modal-downloads">
+                    <a id="downloadImage" href="#" download class="btn-download btn-download-img">
+                        <span class="dl-icon">⬇</span> Descargar Miniatura
+                    </a>
+                    <a id="downloadVideo" href="#" target="_blank" class="btn-download btn-download-video">
+                        <span class="dl-icon">▶</span> Ver / Descargar Video
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>© 2026 KaliHub - Vídeos de Kali Linux para el aprendizaje de ciberseguridad. "Try Harder".</p>
+        <div class="footer-buster">
+            <span class="footer-buster-small">CREADO POR</span>
+            <span class="footer-buster-name">ERIK BUSTO</span>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
